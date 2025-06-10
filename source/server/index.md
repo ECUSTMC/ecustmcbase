@@ -49,8 +49,7 @@ document.addEventListener('DOMContentLoaded', function() {
     { address: 'mcs.ecustvr.top' },
     { address: 'mcmod.ecustvr.top' },
     { address: 'cab.ecustvr.top' },
-    { address: 'gtnh.ecustvr.top' },
-    { address: 'mch.ecustvr.top:25566' }
+    { address: 'gtnh.ecustvr.top' }
   ];
 
   // 生成服务器状态卡片
