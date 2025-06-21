@@ -953,7 +953,7 @@ CDN:
 
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: https://cdn.iocdn.cc/npm/${name}@${version}/${min_file}
+  custom_format: https://cdn.jsdmirror.com/npm/${name}@${version}/${min_file}
 
   option:
     # abcjs_basic_js:
