@@ -5,6 +5,10 @@
       link: https://www.ecust.edu.cn/
       avatar: https://www.ecust.edu.cn/_upload/tpl/00/2c/44/template44/images/logo.png
       descr: 华东理工大学
+    - name: ECUSTCIC
+      link: https://www.ecustcic.com/
+      avatar: https://cnb.ecustvr.top/ecustcic/ecustcic-web/-/git/raw/master/src/assets/logo.png
+      descr: 华东理工大学VR俱乐部
     - name: ECUSTVR
       link: https://www.ecustvr.top/
       avatar: https://cs.s.ecust.edu.cn/star3/origin/de92cbe9ea044a985c7fb85bf010dd14.png
@@ -42,7 +46,7 @@
       descr: ZDisk
     - name: 辉夜
       link: https://www.noctuna.cc/
-      avatar: https://blogpic-5qb.pages.dev/img/avatar/neko.jpg
+      avatar: https://cdn.jsdmirror.cn/gh/UKEricPZ/blogimage@main/avatar.png
       descr: 尘世之外の咖啡屋
     - name: Palpitate.xus
       link: https://blog.ecust.fun/
@@ -50,15 +54,15 @@
       descr: Palpitate's Blog
     - name: Eric
       link: https://www.ecust.icu/
-      avatar: https://cdn.jsdmirror.com/gh/UKEricPZ/blogimage@main/b_807cbe92f38534bcbeb84c002fa31985.jpg
+      avatar: https://cdn.jsdmirror.cn/gh/UKEricPZ/blogimage@main/b_807cbe92f38534bcbeb84c002fa31985.jpg
       descr: 老张的后花园
     - name: UKEricPZ
       link: https://blog.ukericpz.com/
-      avatar: https://cdn.jsdmirror.com/gh/UKEricPZ/blogimage@main/avatar.png
+      avatar: https://cdn.jsdmirror.cn/gh/UKEricPZ/blogimage@main/avatar.png
       descr: 乆鸽 UKEricPZ
     - name: 文野
       link: https://wenye01.github.io/
-      avatar: https://cdn.jsdmirror.com/gh/wenye01/wenye01.github.io/img/profile.jpg
+      avatar: https://cdn.jsdmirror.cn/gh/wenye01/wenye01.github.io/img/profile.jpg
       descr: 文野
       
 - class_name: 网站框架
@@ -77,6 +81,6 @@
       descr: 本网站使用的框架美化方案教程
     - name: Butterfly github
       link: https://github.com/jerryc127/hexo-theme-butterfly
-      avatar: https://cdn.jsdmirror.com/gh/jerryc127/CDN/img/butterfly-github-avatar.png
+      avatar: https://cdn.jsdmirror.cn/gh/jerryc127/CDN/img/butterfly-github-avatar.png
       descr: 本网站使用的框架美化方案github库
 
