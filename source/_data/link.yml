@@ -21,6 +21,10 @@
       link: https://www.mualliance.cn/
       avatar: https://www.mualliance.cn/wp-content/uploads/2023/01/mua.png
       descr: Minecraft高校联盟
+    - name: SITMC
+      link: https://www.sitmc.club/
+      avatar: https://www.sitmc.club/wp-content/uploads/2024/03/1709272675-%E7%99%BD%E5%BA%95.png
+      descr: 上海应用技术大学Minecraft社
     - name: SJMC
       link: https://mc.sjtu.cn/
       avatar: https://www.mualliance.cn/wp-content/uploads/2023/01/mcclub_%E9%80%8F%E6%98%8E%E8%83%8C%E6%99%AF-300x300.png
@@ -38,33 +42,6 @@
       avatar: https://mirror.sjtu.edu.cn/_next/static/media/sjtug.76fad9ca.svg
       descr: 上海交通大学 Linux 用户组 软件源镜像服务
 
-- class_name: 成员（未详尽列出）
-  link_list:
-    - name: bestzyq
-      link: http://www.bestzyq.cn/
-      avatar: https://pic6.zhimg.com/v2-8465be313991488abe3c1eb899c5acff_xll.jpg
-      descr: ZDisk
-    - name: 辉夜
-      link: https://www.noctuna.cc/
-      avatar: https://cdn.jsdmirror.cn/gh/Harukuya/blogpic@main/img/avatar/neko.jpg
-      descr: 尘世之外の咖啡屋
-    - name: Palpitate.xus
-      link: https://blog.ecust.fun/
-      avatar: https://blog.ecust.fun/img/avatar.jpg
-      descr: Palpitate's Blog
-    - name: Eric
-      link: https://www.ecust.icu/
-      avatar: https://cdn.jsdmirror.cn/gh/UKEricPZ/blogimage@main/b_807cbe92f38534bcbeb84c002fa31985.jpg
-      descr: 老张的后花园
-    - name: UKEricPZ
-      link: https://blog.ukericpz.com/
-      avatar: https://cdn.jsdmirror.cn/gh/UKEricPZ/blogimage@main/avatar.png
-      descr: 乆鸽 UKEricPZ
-    - name: 文野
-      link: https://wenye01.github.io/
-      avatar: https://cdn.jsdmirror.cn/gh/wenye01/wenye01.github.io/img/profile.jpg
-      descr: 文野
-      
 - class_name: 网站框架
   link_list:
     - name: Hexo
