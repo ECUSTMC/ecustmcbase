@@ -21,6 +21,7 @@ date: 2024-12-10 15:09:46
 
 <div id="alist-nav">当前路径: <span id="current-path">/MC/</span></div>
 <div id="alist-files">加载中...</div>
+<div id="alist-pagination"></div>
 
 <script>
 document.addEventListener('DOMContentLoaded', function() {
@@ -29,7 +30,9 @@ document.addEventListener('DOMContentLoaded', function() {
     baseUrl: 'https://ss.bestzyq.cn/', // Alist 实例地址
     basePath: '/MC/',  // 基础目录路径
     currentPath: '/MC/',  // 当前目录路径（会动态变化）
-    password: '' // 如果需要密码，请在这里填写
+    password: '', // 如果需要密码，请在这里填写
+    itemsPerPage: 10, // 每页显示的项目数
+    currentPage: 1 // 当前页码
   };
 
   // 更新导航路径显示
@@ -95,8 +98,43 @@ document.addEventListener('DOMContentLoaded', function() {
   // 导航到指定文件夹
   async function navigateToFolder(path) {
     alistConfig.currentPath = path;
+    alistConfig.currentPage = 1; // 切换文件夹时重置到第一页
     updatePathDisplay();
     await renderFileList();
+  }
+
+  // 渲染分页控件
+  function renderPagination(totalPages) {
+    const paginationContainer = document.getElementById('alist-pagination');
+    if (!paginationContainer) return;
+
+    if (totalPages <= 1) {
+      paginationContainer.innerHTML = '';
+      return;
+    }
+
+    let paginationHtml = '';
+    
+    // 上一页按钮
+    paginationHtml += `<button class="pagination-btn" data-page="${alistConfig.currentPage - 1}" ${alistConfig.currentPage === 1 ? 'disabled' : ''}>上一页</button>`;
+
+    // 页码信息
+    paginationHtml += `<span class="pagination-info">${alistConfig.currentPage} / ${totalPages}</span>`;
+
+    // 下一页按钮
+    paginationHtml += `<button class="pagination-btn" data-page="${alistConfig.currentPage + 1}" ${alistConfig.currentPage === totalPages ? 'disabled' : ''}>下一页</button>`;
+
+    paginationContainer.innerHTML = paginationHtml;
+
+    // 为分页按钮添加点击事件
+    document.querySelectorAll('.pagination-btn').forEach(btn => {
+      btn.addEventListener('click', function() {
+        if (this.disabled) return;
+        const page = parseInt(this.getAttribute('data-page'));
+        alistConfig.currentPage = page;
+        renderFileList();
+      });
+    });
   }
 
   // 渲染文件列表
@@ -105,21 +143,34 @@ document.addEventListener('DOMContentLoaded', function() {
     filesContainer.innerHTML = '加载中...';
     
     try {
-      const files = await fetchAlistFiles(alistConfig.currentPath);
+      const allFiles = await fetchAlistFiles(alistConfig.currentPath);
       
-      if (files === null) {
+      if (allFiles === null || allFiles.length === 0) {
         filesContainer.innerHTML = '此文件夹为空';
+        renderPagination(0); // 清空分页
         return;
       }
       
+      // 先显示文件夹，再显示文件
+      const folders = allFiles.filter(file => file.type === 1);
+      const onlyFiles = allFiles.filter(file => file.type !== 1);
+      const sortedFiles = [...folders, ...onlyFiles];
+
+      // 分页计算
+      const totalItems = sortedFiles.length;
+      const totalPages = Math.ceil(totalItems / alistConfig.itemsPerPage);
+      const startIndex = (alistConfig.currentPage - 1) * alistConfig.itemsPerPage;
+      const endIndex = startIndex + alistConfig.itemsPerPage;
+      const paginatedFiles = sortedFiles.slice(startIndex, endIndex);
+
       let html = '<table class="alist-table"><thead><tr><th>名称</th><th>大小</th><th>修改时间</th></tr></thead><tbody>';
       
-      // 如果不是根目录，添加返回上级目录选项
-      if (alistConfig.currentPath !== alistConfig.basePath) {
+      // 如果不是根目录，并且在第一页，才显示返回上级目录
+      if (alistConfig.currentPath !== alistConfig.basePath && alistConfig.currentPage === 1) {
         const parentPath = alistConfig.currentPath.split('/').slice(0, -2).join('/') + '/';
         html += `
           <tr class="parent-dir">
-            <td colspan="4">
+            <td colspan="3">
               <span class="file-icon">↩</span>
               <a href="javascript:void(0)" class="folder-link" data-path="${parentPath}">返回上级目录</a>
             </td>
@@ -127,42 +178,33 @@ document.addEventListener('DOMContentLoaded', function() {
         `;
       }
       
-      // 先显示文件夹，再显示文件
-      const folders = files.filter(file => file.type === 1);
-      const onlyFiles = files.filter(file => file.type !== 1);
-      
-      // 显示文件夹
-      folders.forEach(folder => {
-        const modTime = new Date(folder.modified).toLocaleString();
-        const folderPath = alistConfig.currentPath + folder.name + '/';
-        
-        html += `
-          <tr class="folder-row">
-            <td>
-              <span class="file-icon">📁</span>
-              <a href="javascript:void(0)" class="folder-link" data-path="${folderPath}">${folder.name}</a>
-            </td>
-            <td>-</td>
-            <td>${modTime}</td>
-          </tr>
-        `;
-      });
-      
-      // 显示文件
-      onlyFiles.forEach(file => {
-        const fileSize = formatFileSize(file.size);
+      paginatedFiles.forEach(file => {
         const modTime = new Date(file.modified).toLocaleString();
-        
-        html += `
-          <tr>
-            <td>
-              <span class="file-icon">📄</span>
-              <a href="${alistConfig.baseUrl}d/Public${alistConfig.currentPath}${file.name}" target="_blank">${file.name}</a>
-            </td>
-            <td>${fileSize}</td>
-            <td>${modTime}</td>
-          </tr>
-        `;
+        if (file.type === 1) { // 文件夹
+          const folderPath = alistConfig.currentPath + file.name + '/';
+          html += `
+            <tr class="folder-row">
+              <td data-label="名称">
+                <span class="file-icon">📁</span>
+                <a href="javascript:void(0)" class="folder-link" data-path="${folderPath}">${file.name}</a>
+              </td>
+              <td data-label="大小">-</td>
+              <td data-label="修改时间">${modTime}</td>
+            </tr>
+          `;
+        } else { // 文件
+          const fileSize = formatFileSize(file.size);
+          html += `
+            <tr>
+              <td data-label="名称">
+                <span class="file-icon">📄</span>
+                <a href="${alistConfig.baseUrl}d/Public${alistConfig.currentPath}${file.name}" target="_blank">${file.name}</a>
+              </td>
+              <td data-label="大小">${fileSize}</td>
+              <td data-label="修改时间">${modTime}</td>
+            </tr>
+          `;
+        }
       });
       
       html += '</tbody></table>';
@@ -175,8 +217,12 @@ document.addEventListener('DOMContentLoaded', function() {
           navigateToFolder(path);
         });
       });
+
+      renderPagination(totalPages);
+
     } catch (error) {
       filesContainer.innerHTML = `加载失败: ${error.message}`;
+      renderPagination(0); // 清空分页
     }
   }
 
@@ -260,5 +306,69 @@ document.addEventListener('DOMContentLoaded', function() {
 
 .folder-row td {
   font-weight: 500;
+}
+
+#alist-pagination {
+  margin-top: 20px;
+  text-align: center;
+}
+.pagination-btn {
+  padding: 8px 16px;
+  margin: 0 5px;
+  border: 1px solid #ddd;
+  background-color: #f8f8f8;
+  cursor: pointer;
+  border-radius: 4px;
+}
+.pagination-btn:disabled {
+  cursor: not-allowed;
+  opacity: 0.5;
+}
+.pagination-info {
+  margin: 0 10px;
+  font-weight: bold;
+  display: inline-block;
+  vertical-align: middle;
+}
+
+@media screen and (max-width: 768px) {
+  .alist-table thead {
+    display: none;
+  }
+  .alist-table, .alist-table tbody, .alist-table tr, .alist-table td {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+  }
+  .alist-table tr {
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    overflow: hidden;
+  }
+  .alist-table td {
+    border-bottom: 1px solid #eee;
+  }
+  .alist-table tr td:last-child {
+    border-bottom: none;
+  }
+  .alist-table td:not([colspan]) {
+    text-align: right;
+    padding-left: 50%;
+    position: relative;
+  }
+  .alist-table td:not([colspan])::before {
+    content: attr(data-label);
+    position: absolute;
+    left: 12px;
+    width: 45%;
+    padding-right: 10px;
+    white-space: nowrap;
+    text-align: left;
+    font-weight: bold;
+  }
+  .folder-link, .alist-table a {
+    word-break: break-all;
+  }
 }
 </style>
