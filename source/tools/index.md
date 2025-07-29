@@ -112,7 +112,7 @@ document.addEventListener('DOMContentLoaded', function() {
         return;
       }
       
-      let html = '<table class="alist-table"><thead><tr><th>名称</th><th>大小</th><th>修改时间</th><th>操作</th></tr></thead><tbody>';
+      let html = '<table class="alist-table"><thead><tr><th>名称</th><th>大小</th><th>修改时间</th></tr></thead><tbody>';
       
       // 如果不是根目录，添加返回上级目录选项
       if (alistConfig.currentPath !== alistConfig.basePath) {
@@ -144,11 +144,6 @@ document.addEventListener('DOMContentLoaded', function() {
             </td>
             <td>-</td>
             <td>${modTime}</td>
-            <td>
-              <a href="${alistConfig.baseUrl}${alistConfig.currentPath.replace(/^\//, '')}${folder.name}" target="_blank">
-                在新窗口打开
-              </a>
-            </td>
           </tr>
         `;
       });
@@ -162,15 +157,10 @@ document.addEventListener('DOMContentLoaded', function() {
           <tr>
             <td>
               <span class="file-icon">📄</span>
-              ${file.name}
+              <a href="${alistConfig.baseUrl}d/Public${alistConfig.currentPath}${file.name}" target="_blank">${file.name}</a>
             </td>
             <td>${fileSize}</td>
             <td>${modTime}</td>
-            <td>
-              <a href="${alistConfig.baseUrl}d/Public${alistConfig.currentPath}${file.name}" target="_blank">
-                下载
-              </a>
-            </td>
           </tr>
         `;
       });
