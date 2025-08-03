@@ -6,7 +6,7 @@ date: 2024-04-05 01:19:33
 ## 🏰 服务器
 > ⚠️ 注意：进入需使用[皮肤站](https://mcskin.ecustvr.top/)认证，具体流程见[萌新指南](/tutorial/)。如需使用1.21.2+版本，请使用备用地址中电信/移动线路！
 - 🎮 版本：1.7.2-1.21.4均可进入
-- ⏰ 开放时间：8:00 ~ 22:35（节假日顺延1h）
+- ⏰ 开放时间：24h
 - 🌐 服务器群组地址：`mcs.ecustvr.top`
     - 🧩 mod服地址：`mcmod.ecustvr.top`
 - 📋 介绍：设有lobby和mod（模组服）以及不定期开放的活动服务器
@@ -25,21 +25,27 @@ date: 2024-04-05 01:19:33
 </div>
 
 ## 💻 技术介绍
-采用Velocity组建群组代理，采用modern方式转发。上层接入[联合大厅接入点](https://docs.mualliance.cn/zh/dev/union/lobby)，通过[联合认证](https://docs.mualliance.cn/zh/dev/union/auth)保证服务器安全。
+详见[Minecraft高校联盟资料站](https://docs.mualliance.cn/)：[联合大厅](https://docs.mualliance.cn/zh/dev/union/lobby)、[联合认证](https://docs.mualliance.cn/zh/dev/union/auth)
 
 ### 🌐 接入点
-- 🎓 上交接入点：lobby.mualliance.cn / mua.sjmc.club
-- 🏫 浙江接入点：hb.mualliance.cn
-- 🏛️ 湖北接入点：imu.mualliance.cn / unions.imucraft.cn / unions6.imucraft.cn （IPv6）
-- 🏝️ 四川接入点：taru.mualliance.cn / union.tarucraft.club
+> ⚠️ 非实时更新，详见[联合大厅](https://docs.mualliance.cn/zh/dev/union/lobby)
+
+- 上交接入点：lobby.mualliance.cn / mua.sjmc.club （支持IPv6）
+- 浙江接入点：hb.mualliance.cn
+- 湖北接入点：imu.mualliance.cn / unions.imucraft.cn / unions6.imucraft.cn （IPv6）
+- 四川接入点：taru.mualliance.cn / mcs.taru.xj.cn / union.mc.taru.xj.cn
+- 北京接入点：bj.mualliance.cn / union-bgp.imucraft.cn
+- 四川接入点2：union-sc.imucraft.cn
+
 可输入接入点地址进入MUA大厅后，输入`/hub ECUST`进入ECUST群组服务器。
 
-### 🔄 备用地址
+<!-- ### 🔄 备用地址
 - 🏢 电信：`out.ecust.cloud`
-- 📱 移动：`mch.ecustvr.top`
+- 📱 移动：`mch.ecustvr.top` -->
 
 ## 🙏 致谢
-服务器由 百鬼Polaris 和 [文野](https://wenye01.github.io/) 无偿赞助，特此感谢！
+⛏️ 服务器现由 [百鬼Polaris](https://github.com/Polaris-Leo) 和 [文野](https://wenye.ecustvr.top/) 无偿提供！
+✨ 特此亦向历任服主、维护者、建设和参与者表示衷心感谢！
 
 
 <script>
@@ -47,8 +53,6 @@ document.addEventListener('DOMContentLoaded', function() {
   // 服务器配置
   const servers = [
     { address: 'mcs.ecustvr.top' },
-    { address: 'mcmod.ecustvr.top' },
-    { address: 'cab.ecustvr.top' },
     { address: 'gtnh.ecustvr.top' }
   ];
 

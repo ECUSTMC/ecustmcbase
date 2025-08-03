@@ -18,10 +18,11 @@ menu:
   萌新指南: /tutorial/ || fas fa-pen
   服务器: /server/ || fas fa-server
   工具: /tools/ || fas fa-tools
-  地图||fa fa-map:
-    观光指南: http://mcmap.ecustvr.top/ || fas fa-map-pin
-    生存指南: http://out.ecust.cloud:25501/ || fas fa-map-signs
-    创造指南: http://out.ecust.cloud:25502/ || fas fa-map-marker
+  地图: http://mcmap.ecustvr.top/ || fa fa-map
+  # 地图||fa fa-map:
+  #   观光指南: http://mcmap.ecustvr.top/ || fas fa-map-pin
+  #   生存指南: http://out.ecust.cloud:25501/ || fas fa-map-signs
+  #   创造指南: http://out.ecust.cloud:25502/ || fas fa-map-marker
   列表||fas fa-book:
     时间轴: /archives/ || fas fa-archive
     标签: /tags/ || fas fa-tags
@@ -953,7 +954,11 @@ CDN:
 
   # Custom format
   # For example: https://cdn.staticfile.org/${cdnjs_name}/${version}/${min_cdnjs_file}
-  custom_format: https://cdn.jsdmirror.cn/npm/${name}@${version}/${min_file}
+  # jsdmirror:
+  # custom_format: https://cdn.jsdmirror.cn/npm/${name}@${version}/${min_file}
+  # sustech:
+  custom_format: https://mirrors.sustech.edu.cn/cdnjs/ajax/libs/${cdnjs_name}/${version}/${min_cdnjs_file}
+
 
   option:
     # abcjs_basic_js:
