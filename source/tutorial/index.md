@@ -14,7 +14,7 @@ date: 2024-04-05 23:18:26
 ECUSTMC 提供 Minecraft 角色皮肤的上传以及托管服务。配合 CustomSkinLoader 等换肤 Mod，你可以为你的游戏角色设置皮肤与披风，并让其他玩家在游戏中看到。同时，用户中心使用邮箱/统一身份验证注册和登录，验证了玩家的身份，使服务器免遭破坏。
 
 ### 方法
-打开ECUSTMC皮肤站网址：[https://mcskin.ecustvr.top/](https://mcskin.ecustvr.top/)，校内同学可以使用[https://mcskin.ecustcic.eu.org/](https://mcskin.ecustcic.eu.org/)，非华东理工大学的同学可以在[https://skin.mualliance.ltd/](https://skin.mualliance.ltd/)注册账号
+打开ECUSTMC皮肤站网址：[https://mcskin.ecustvr.top/](https://mcskin.ecustvr.top/)，或者[https://skin.mc.ecustcic.com/](https://skin.mc.ecustcic.com/)，非华东理工大学的同学可以在[https://skin.mualliance.ltd/](https://skin.mualliance.ltd/)注册账号
 
 #### 统一身份认证注册（有统一身份认证的同学）
 进入页面，点击登录/现在注册，点击“注册新账号”。在新的页面上点击“统一身份认证登录”，你就能使用统一身份认证账号注册皮肤站账号了（没有账号会自动注册）。如果需要登陆，在用户名处输入**邮箱**登录（学号@mail.ecust.edu.cn）。首次登录完成后，你需要输入你想要使用的游戏用户名，创建你的游戏角色。如果没有提示你输入游戏用户名，请手动创建一个：
@@ -105,7 +105,6 @@ ECUSTMC 提供 Minecraft 角色皮肤的上传以及托管服务。配合 Custom
 
 4. 在“服务器地址”中输入服务器的域名或IP地址（见群公告，或查看[服务器](/server/)），点击“完成”保存。如：
     - 🌐 服务器群组地址：`mcs.ecustvr.top`
-        - 🧩 mod服地址：`mod.ecustvr.top`
 5. （后续打开只需）在服务器列表，双击已添加的服务器，进入服务器
 
 > 参考（大家如有问题也可以看看）：

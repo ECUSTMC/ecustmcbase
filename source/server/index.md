@@ -4,12 +4,12 @@ date: 2024-04-05 01:19:33
 ---
 
 ## 🏰 服务器
-> ⚠️ 注意：进入需使用[皮肤站](https://mcskin.ecustvr.top/)认证，具体流程见[萌新指南](/tutorial/)。如需使用1.21.2+版本，请使用备用地址中电信/移动线路！
-- 🎮 版本：1.7.2-1.21.4均可进入
+> ⚠️ 注意：进入需使用[皮肤站](https://mcskin.ecustvr.top/)认证，具体流程见[萌新指南](/tutorial/)。
+- 🎮 版本：1.20.2-1.21.10均可进入
 - ⏰ 开放时间：24h
-- 🌐 服务器群组地址：`mcs.ecustvr.top`
+- 🌐 服务器群组地址：`mc.ecustvr.top`
     - 🧩 mod服地址：`mcmod.ecustvr.top`
-- 📋 介绍：设有lobby和mod（模组服）以及不定期开放的活动服务器
+- 📋 介绍：设有原版服和模组服以及不定期开放的活动服务器
 - 🔄 切换服务器：/server <服务器名>，例：`/server lobby`
 - 🏫 切换其他高校服务器：/hub <学校代码[（点此查询）](https://docs.mualliance.cn/zh/dev/union/lobby)>，例如：`/server SJMC`
 
@@ -19,7 +19,7 @@ date: 2024-04-05 01:19:33
 - 🏗️ 创造服（即将撤销）地图：[点击进入](http://out.ecust.cloud:25502/) -->
 
 ## 📊 在线状态
-> 📊 由 [上海交通大学Minecraft社](https://mc.sjtu.cn/) 提供状态监测服务（离线情况不一定准确）
+> 📊 由 [上海交通大学Minecraft社](https://mc.sjtu.cn/) 提供状态监测服务（离线情况不一定准确，可以多刷新几次）
 
 <div id="serverStatus" class="server-status">
 </div>
