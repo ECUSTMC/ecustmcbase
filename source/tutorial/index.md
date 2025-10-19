@@ -43,10 +43,10 @@ ECUSTMC 提供 Minecraft 角色皮肤的上传以及托管服务。配合 Custom
 
 ## 账号设置
 将“将此按钮拖动至启动器”拖动至启动器
-![将此按钮拖动至启动器](https://picx.zhimg.com/80/v2-c9c469f878cc2476148aa09d81232291_1440w.png)
+![将此按钮拖动至启动器](https://pic2.zhimg.com/80/v2-c9c469f878cc2476148aa09d81232291_1440w.png)
 
 ⚠️请注意：务必切换账号到ECUSTMC或者其他Union账号，如下图所示：
-![切换账号](https://picx.zhimg.com/80/v2-9d0b1a930ded8b0568e38c87a8fe589e_1440w.png)
+![切换账号](https://pic2.zhimg.com/80/v2-9d0b1a930ded8b0568e38c87a8fe589e_1440w.png)
 
 > 理论上，将“将此按钮拖动至启动器”拖动至启动器，即可完成设置。但是，防止一些同学不会操作，还是讲讲手动输入方法。
 

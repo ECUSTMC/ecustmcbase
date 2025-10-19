@@ -62,7 +62,7 @@ favicon: https://www.ecust.edu.cn/_upload/tpl/00/2c/44/template44/images/logo.pn
 
 # Avatar (頭像)
 avatar:
-  img: https://pic6.zhimg.com/80/v2-9a793a9814442bab394bd2c974d7899e_1440w.jpeg
+  img: https://pic2.zhimg.com/80/v2-9a793a9814442bab394bd2c974d7899e_1440w.jpeg
   effect: false
 
 # Disable all banner image
@@ -105,9 +105,9 @@ cover:
   position: both
   # When cover is not set, the default cover is displayed (當沒有設置cover時，默認的封面顯示)
   default_cover:
-    - https://pic6.zhimg.com/80/v2-acb61183e22a905b4477918d9c727678_1440w.png
-    - https://pic6.zhimg.com/80/v2-eca7c7814bcaaa91fd41ecefbecfa670_1440w.png
-    - https://pic6.zhimg.com/80/v2-03ef9fd5320aacca4aba6095d96ae47e_1440w.webp
+    - https://pic2.zhimg.com/80/v2-acb61183e22a905b4477918d9c727678_1440w.png
+    - https://pic2.zhimg.com/80/v2-eca7c7814bcaaa91fd41ecefbecfa670_1440w.png
+    - https://pic2.zhimg.com/80/v2-03ef9fd5320aacca4aba6095d96ae47e_1440w.webp
 
 # Replace Broken Images (替換無法顯示的圖片)
 error_img:

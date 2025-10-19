@@ -14,7 +14,7 @@ categories: 教程
 > ⚠️在此仅为举例，在下有所使用，但不对其日后服务做出保证，请自行观察决定！
 
 例如[蓝谷科技（8465.cn）](https://8465.cn/aff/JESDDLVE)的纯ipv6服务器，【2H2G3M型】只要2.99元/月，年付28元，建个皮肤站绰绰有余。可以用优惠码ecustmc享受85折优惠。
-![](https://picx.zhimg.com/80/v2-968d1514d66f1ec1f48521b7881e7b2f.png)
+![](https://pic2.zhimg.com/80/v2-968d1514d66f1ec1f48521b7881e7b2f.png)
 
 ## Blessing Skin安装
 正常安装配置，请参考[Blessing Skin官方安装指南：https://blessing.netlify.app/](https://blessing.netlify.app/)以及[MUA文档：https://docs.mualliance.cn/zh/dev/skin](https://docs.mualliance.cn/zh/dev/skin)。
