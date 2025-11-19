@@ -7,7 +7,7 @@
       descr: 华东理工大学
     - name: ECUSTCIC
       link: https://www.ecustcic.com/
-      avatar: https://cnb.ecustvr.top/ecustcic/ecustcic-web/-/git/raw/master/src/assets/logo.png
+      avatar: https://pic2.zhimg.com/80/v2-5d1ea7ea4ad9a2b2b43df9fed6e0d05b_l.png
       descr: 华东理工大学计算机信息交流协会
     - name: ECUSTVR
       link: https://www.ecustvr.top/
@@ -58,6 +58,6 @@
       descr: 本网站使用的框架美化方案教程
     - name: Butterfly github
       link: https://github.com/jerryc127/hexo-theme-butterfly
-      avatar: https://cdn.jsdmirror.cn/gh/jerryc127/CDN/img/butterfly-github-avatar.png
+      avatar: https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-github-avatar.png
       descr: 本网站使用的框架美化方案github库
 
