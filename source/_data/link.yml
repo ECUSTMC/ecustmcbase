@@ -46,7 +46,7 @@
   link_list:
     - name: Hexo
       link: https://hexo.io/zh-tw/
-      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      avatar: https://hexo.io/logo.svg
       descr: 快速、简单且强大的网志框架
     - name: Blessing Skin Server
       link: https://blessing.netlify.app/
@@ -54,10 +54,10 @@
       descr: 皮肤站模板
     - name: Butterfly
       link: https://butterfly.js.org/
-      avatar: https://d33wubrfki0l68.cloudfront.net/6657ba50e702d84afb32fe846bed54fba1a77add/827ae/logo.svg
+      avatar: https://butterfly.js.org/img/butterfly-icon.png
       descr: 本网站使用的框架美化方案教程
     - name: Butterfly github
       link: https://github.com/jerryc127/hexo-theme-butterfly
-      avatar: https://cdn.jsdelivr.net/gh/jerryc127/CDN/img/butterfly-github-avatar.png
+      avatar: https://butterfly.js.org/img/butterfly-icon.png
       descr: 本网站使用的框架美化方案github库
 
