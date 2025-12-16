@@ -1,0 +1,34 @@
+master:
+  push:
+    - name: sync
+      runner:
+        cpus: 1
+      imports: https://cnb.cool/ecustmc/key/-/blob/main/env.yml
+      stages:
+        - name: sync to gitee
+          image: tencentcom/git-sync
+          settings:
+            target_url: https://gitee.com/ecustmc/ecustmcbase.git
+            auth_type: https
+            username: ${GITEE_USERNAME}
+            password: ${GITEE_ACCESS_TOKEN}
+        - name: sync to github
+          image: tencentcom/git-sync
+          settings:
+            target_url: https://github.com/ecustmc/ecustmcbase.git
+            auth_type: https
+            username: ${GITHUB_USERNAME}
+            password: ${GITHUB_ACCESS_TOKEN}
+    - name: edgeone
+      runner:
+        cpus: 2
+      imports: https://cnb.cool/ecustmc/key/-/blob/main/env.yml
+      stages:
+        # 构建当前项目
+        - name: Build Current Project
+          image: docker.cnb.cool/arsrna/dev-env/node22
+          script: node -v && npm install && npm run build
+        # 将构建输出部署到 EdgeOne Pages
+        - name: Deploy to EdgeOne Pages
+          image: tencentcom/deploy-eopages:latest
+          script: edgeone pages deploy ./public -n ecustmc -t $EDGEONE_API_TOKEN
