@@ -53,7 +53,8 @@ document.addEventListener('DOMContentLoaded', function() {
   // 服务器配置
   const servers = [
     { address: 'mcs.ecustvr.top' },
-    { address: 'gtnh.ecustvr.top' }
+    { address: 'gtnh.ecustvr.top' },
+    { address: 'mcmod.ecustvr.top' }
   ];
 
   // 生成服务器状态卡片

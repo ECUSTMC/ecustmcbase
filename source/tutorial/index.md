@@ -42,7 +42,7 @@ ECUSTMC 提供 Minecraft 角色皮肤的上传以及托管服务。配合 Custom
     
 
 ## 账号设置
-将“将此按钮拖动至启动器”拖动至启动器
+将“将此按钮拖动至启动器”拖动至启动器，然后登录ECUSTMC账号，输入用户名（邮箱：学号@mail.ecust.edu.cn，如`21000001@mail.ecust.edu.cn`；或者角色名，如`minecrafter`）和密码。
 ![将此按钮拖动至启动器](https://pic2.zhimg.com/80/v2-c9c469f878cc2476148aa09d81232291_1440w.png)
 
 ⚠️请注意：务必切换账号到ECUSTMC或者其他Union账号，如下图所示：
@@ -54,7 +54,7 @@ ECUSTMC 提供 Minecraft 角色皮肤的上传以及托管服务。配合 Custom
 
 点击左上角账户，点左下角“添加认证服务器”，输入https://mcskin.ecustvr.top/api/yggdrasil，点击下一步，完成。
 
-点击左侧新创建的认证服务器，输入用户名和密码。添加完成后选中此角色。
+点击左侧新创建的认证服务器，输入用户名（邮箱：学号@mail.ecust.edu.cn，如`21000001@mail.ecust.edu.cn`；或者角色名，如`minecrafter`）和密码。添加完成后选中此角色。
 
 > 放个SJMC的图片示意
 > 
@@ -70,6 +70,8 @@ ECUSTMC 提供 Minecraft 角色皮肤的上传以及托管服务。配合 Custom
 注册链接：https://mcskin.ecustvr.top/auth/register
 
 认证服务器名称：ECUST
+
+输入用户名（邮箱：学号@mail.ecust.edu.cn，如`21000001@mail.ecust.edu.cn`；或者角色名，如`minecrafter`）和密码。
 
 添加完成后返回主页，在启动游戏时登录。
 
